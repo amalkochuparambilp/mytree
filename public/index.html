@@ -1,89 +1,130 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.11.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.11.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:3452598266. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amal K P</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Saira:wght@800&display=swap"
+        rel="stylesheet">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+    
+            body {
+                height: 100vh;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            h2 {
+                font-family: 'Saira', sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+                text-shadow: 0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 50%);
+            }
+    
+            body >img {
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+    
+            section {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                inset: 0;
+                overflow-y: scroll;
+            }
+            
+            section div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            section > div {
+                padding: 100px 10px;
+            }
+    
+            section div img {
+                width: 100px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                box-shadow: 0 0 8px 1px lightblue;
+            }
+    
+            a {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                border: 1.5px solid white;
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+                gap: 20px;
+                align-items: center;
+                border-radius: 4px;
+                transition-duration: 200ms;
+            }
+    
+            a:hover {
+                background: white;
+                color: #0f172a;
+            }
+    
+            a i {
+                font-size: 1.3em;
+            }
+    
+    
+        </style>
+</head>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<body>
+    <img src="https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW5pbWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww" alt="bg" />
+    <section>
+        <div>
+            <img src="data:image/jpeg;base64,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" alt="dp" />
+            <h2>Amal K P</h2>
+            <div>
+                <a href="https://m.facebook.com/amalkochuparambilp">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Tiktok</p>
+                </a>
+                <a href="https://instagram.com/amalkochuparambilp">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Instagram</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>
